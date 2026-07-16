@@ -1,3 +1,3 @@
-# github.io
+# Ninon Cadic
 
-Page personnelle de Ninon Cadic, bénévole sauvetage petits rongeurs & NAC, fondatrice de [Hamster et Compagnie](https://hamster-et-compagnie.fr).
+Bénévole sauvetage petits rongeurs & NAC. Fondatrice de [Hamster et Compagnie](https://hamster-et-compagnie.fr).
