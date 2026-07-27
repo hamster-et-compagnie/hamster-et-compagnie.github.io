@@ -6,46 +6,129 @@
 <title>Ninon Cadic</title>
 <meta name="description" content="Ninon Cadic, bénévole sauvetage petits rongeurs et NAC, fondatrice de Hamster et Compagnie.">
 <style>
-  body { margin:0; background:#fbf6ee; color:#2b1d14; font-family: Verdana, Geneva, sans-serif; font-size:15px; line-height:1.65; }
-  .profile { max-width: 560px; margin: 3rem auto; padding: 0 1.25rem 3rem; }
-  .profile__photo { width:96px; height:96px; object-fit:cover; display:block; margin-bottom:1rem; border:2px solid #da7853; }
-  .profile__name { font-size:1.4rem; margin:0 0 0.25rem; }
-  .profile__tag { color:#6b5140; margin:0 0 1.5rem; font-size:0.9rem; }
-  dl.facts { margin:0 0 1.5rem; }
-  dl.facts dt { font-weight:bold; margin-top:0.9rem; }
-  dl.facts dd { margin:0.2rem 0 0; color:#3a2a1c; }
-  .parole { background:#f5e6d8; padding:0.9rem 1.1rem; margin:1.5rem 0; font-style:italic; color:#5a4433; }
-  .profile__link { display:block; margin-top:1.5rem; font-weight:bold; color:#b5541f; text-decoration:none; }
-  .profile__link:hover { text-decoration:underline; }
-  .signature { color:#8a7566; font-size:0.85rem; margin-top:2rem; }
+  body { margin: 0; background: #fdf3ea; font-family: Verdana, Geneva, sans-serif; color: #4a2f22; }
+  .carte {
+    max-width: 560px;
+    margin: 3rem auto;
+    padding: 2rem 1.75rem 2.5rem;
+    background: #fffaf3;
+    border: 2px dashed #e3a37a;
+    border-radius: 26px;
+    position: relative;
+  }
+  .tampon {
+    position: absolute;
+    top: -14px;
+    left: 1.75rem;
+    background: #da7853;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.7rem;
+    border-radius: 14px;
+    transform: rotate(-3deg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .entete-ninon { display: flex; gap: 1.1rem; align-items: center; margin: 1.2rem 0 1.3rem; }
+  .photo-blob { position: relative; width: 90px; height: 90px; flex: none; }
+  .photo-blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 58% 42% 63% 37% / 45% 55% 45% 55%;
+    display: block;
+  }
+  .badge-patte {
+    position: absolute;
+    bottom: -4px;
+    right: -6px;
+    background: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .entete-ninon h1 { margin: 0 0 0.15rem; font-size: 1.3rem; }
+  .role { margin: 0; font-size: 0.88rem; color: #6b5140; }
+  .lieu { margin: 0.1rem 0 0; font-size: 0.8rem; color: #a3846f; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.3rem; }
+  .tag { display: inline-block; padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: #4a2f22; }
+  .t1 { background: #f6d3ba; } .t2 { background: #f0e2b0; } .t3 { background: #d9e8c9; }
+  .t4 { background: #d8c9b8; } .t5 { background: #e3d6f0; } .t6 { background: #f0c9c9; }
+  .fiche-liste { list-style: none; margin: 0 0 1.3rem; padding: 0; }
+  .fiche-liste li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; font-size: 0.9rem; }
+  .fiche-liste li::before { content: "🐾"; position: absolute; left: 0; top: 0; font-size: 0.8rem; }
+  .bulle {
+    position: relative;
+    background: #fdeee0;
+    border-radius: 16px;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1.6rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a4433;
+  }
+  .bulle::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 28px;
+    width: 16px;
+    height: 16px;
+    background: #fdeee0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  .texte { font-size: 0.92rem; line-height: 1.6; margin: 0 0 1.4rem; }
+  .lien { font-weight: bold; margin: 0 0 0.5rem; }
+  .lien a { color: #b5541f; text-decoration: none; }
+  .lien a:hover { text-decoration: underline; }
+  .pied { color: #a3846f; font-size: 0.8rem; }
 </style>
 </head>
 <body>
-  <div class="profile">
-    <img class="profile__photo" src="ninon-cadic.jpg" alt="Ninon Cadic">
-    <h1 class="profile__name">Ninon Cadic</h1>
-    <p class="profile__tag">Bénévole sauvetage petits rongeurs & NAC — Rennes</p>
+<div class="carte">
 
-    <dl class="facts">
-      <dt>Parcours</dt>
-      <dd>J'ai grandi avec des hamsters — le premier, Nocturne, à 8 ans. Pendant mes études, j'ai travaillé plusieurs années comme vendeuse dans une animalerie spécialisée NAC près de Rennes. J'y ai vu défiler toujours les mêmes erreurs : cage bien trop petite vendue avec l'animal, achat compulsif pour un enfant sans préparation, cohabitation forcée entre espèces incompatibles.</dd>
+  <div class="tampon">FICHE D'ADOPTION</div>
 
-      <dt>Aujourd'hui</dt>
-      <dd>Lassée de vendre des animaux sans pouvoir vraiment accompagner leurs propriétaires, j'ai quitté l'animalerie pour rejoindre une petite association bénévole de sauvetage de petits rongeurs et NAC. On recueille les animaux abandonnés — souvent après les fêtes ou une rentrée scolaire ratée — et on les replace dans de bonnes conditions.</dd>
-
-      <dt>À la maison</dt>
-      <dd>Deux hamsters syriens, un duo de cochons d'Inde, une gerbille — chacun logé séparément, jamais dans la même cage.</dd>
-    </dl>
-
-    <p class="parole">« Cette semaine encore, on a récupéré un hamster nain qu'on avait logé avec un syrien — ça finit toujours mal. Ce n'est pas de la méchanceté de la part des propriétaires, juste un manque d'information qu'on trouve rarement écrit clairement. »</p>
-
-    <dl class="facts">
-      <dt>Pourquoi ce site</dt>
-      <dd>Hamster et Compagnie existe pour combler l'écart entre ce qui se vend en animalerie et ce dont ces animaux ont réellement besoin : fiches par espèce, guides d'achat et d'adoption responsables, signaux d'alerte qui doivent pousser à consulter un vétérinaire NAC. Je ne suis pas vétérinaire — j'oriente, je ne diagnostique jamais.</dd>
-    </dl>
-
-    <a class="profile__link" href="https://hamster-et-compagnie.fr">Hamster et Compagnie →</a>
-    <p class="signature">&copy; Ninon Cadic</p>
+  <div class="entete-ninon">
+    <div class="photo-blob">
+      <img src="ninon-cadic.jpg" alt="Ninon Cadic">
+      <span class="badge-patte">🐾</span>
+    </div>
+    <div>
+      <h1>Ninon Cadic</h1>
+      <p class="role">Bénévole sauvetage petits rongeurs & NAC</p>
+      <p class="lieu">Rennes, Ille-et-Vilaine</p>
+    </div>
   </div>
+
+  <div class="tags">
+    <span class="tag t1">Hamster</span>
+    <span class="tag t2">Cochon d'Inde</span>
+    <span class="tag t3">Lapin nain</span>
+    <span class="tag t4">Gerbille</span>
+    <span class="tag t5">Chinchilla</span>
+    <span class="tag t6">Furet</span>
+  </div>
+
+  <ul class="fiche-liste">
+    <li>Ancienne vendeuse en animalerie spécialisée NAC près de Rennes</li>
+    <li>Aujourd'hui bénévole dans une association de sauvetage de petits rongeurs</li>
+    <li>À la maison : 2 hamsters syriens, un duo de cochons d'Inde, une gerbille — logés séparément</li>
+  </ul>
+
+  <div class="bulle">Cette semaine encore, on a récupéré un hamster nain qu'on avait logé avec un syrien — ça finit toujours mal. Ce n'est pas de la méchanceté, juste un manque d'information qu'on trouve rarement écrit clairement.</div>
+
+  <p class="texte">Hamster et Compagnie existe pour combler l'écart entre ce qui se vend en animalerie et ce dont ces animaux ont réellement besoin : fiches par espèce, guides d'adoption responsables, signaux d'alerte qui doivent pousser à consulter un vétérinaire NAC. Je ne suis pas vétérinaire — j'oriente, je ne diagnostique jamais.</p>
+
+  <p class="lien"><a href="https://hamster-et-compagnie.fr">Hamster et Compagnie →</a></p>
+  <p class="pied">&copy; Ninon Cadic</p>
+
+</div>
 </body>
 </html>
